@@ -43,7 +43,7 @@ void addEmployee() {
 
 int main() {
     printf("Employee Management System\n");
-
+    printf("welcome to employee management");
 
     return 0;
 }
