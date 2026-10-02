@@ -58,6 +58,21 @@ void searchEmployee() {
     printf("Employee not found.\n");
 }
 
+void calculateSalary() {
+    int id;
+    printf("Enter Employee ID to calculate salary: ");
+    scanf("%d", &id);
+    for (int i = 0; i < count; i++) {
+        if (employees[i].id == id) {
+            float total = employees[i].basicSalary +
+                          employees[i].housingAllowance +
+                          employees[i].transportAllowance;
+            printf("Total Salary for %s: %.2f\n", employees[i].name, total);
+            return;
+        }
+    }
+    printf("Employee not found.\n");
+}
 int main() {
     printf("Employee Management System\n");
     printf("welcome to employee management");
