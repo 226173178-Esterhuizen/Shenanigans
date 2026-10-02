@@ -10,9 +10,9 @@
 int main() {
     int choice;
     while (1) {
-        printf("n================\n");
+        printf("\n================\n");
         printf(" MUNICIPAL FINANCIAL MANAGEMENT SYSTEM \n");
-        printf("n================\n");
+        printf("\n================\n");
         printf("1. Employees Management\n");
         printf("2. Budget Management\n");
         printf("3. Suppliers Management\n");
