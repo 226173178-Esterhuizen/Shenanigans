@@ -54,6 +54,20 @@ void displayEmployees() {
     }
 }
 
+void searchEmployee() {
+    int id;
+    printf("Enter Employee ID to search: ");
+    scanf("%d", &id);
+    for (int i = 0; i < count; i++) {
+        if (employees[i].id == id) {
+            printf("Employee Found!\nName: %s\nDepartment: %s\nEmail: %s\n", 
+                   employees[i].name, employees[i].department, employees[i].email);
+            return;
+        }
+    }
+    printf("Employee not found.\n");
+}
+
 int main() {
     printf("Employee Management System\n");
     printf("welcome to employee management");
