@@ -6,6 +6,7 @@
 #include "assets.h"
 #include "reports.h"
 #include "testing.h"
+#include "validation.h"
 
 int main() {
     int choice;
@@ -23,11 +24,7 @@ int main() {
         printf("====================\n");
         printf("Enter your choice: ");
 
-        if (scanf("%d", &choice) != 1) {
-            printf("Invalid input. Please enter a number (1-7).\n");
-            while (getchar() != '\n'); // Clear the input buffer
-            continue;
-        }
+        choice = getValidTnt("Enter your chaice (1-7): ");
 
         if (choice == 7) {
             printf("\nExisting system. Goodbye.\n");
@@ -45,7 +42,7 @@ int main() {
             break;
             case 5: printf("\n[Reports Module Selected]\n");
             break;
-            case 6: runSystemTests();
+            case 6: runSystemTests(); //calls code in testing.c
             break;
             default: printf("\nInvalid choice. Try again. Please enter a number between 1 and 7.\n");
         }
