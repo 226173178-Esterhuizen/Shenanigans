@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "assets.h"
 
 struct Asset {
     int id;

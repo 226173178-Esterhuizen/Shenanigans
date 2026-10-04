@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "employees.h"
 #include "budget.h"
 #include "suppliers.h"
@@ -22,9 +23,9 @@ int main() {
         printf("6 Run System Diagnostics\n");
         printf("7. Exit\n");
         printf("====================\n");
-        printf("Enter your choice: ");
+        
 
-        choice = getValidTnt("Enter your chaice (1-7): ");
+        choice = getValidTnt("Enter your choice (1-7): ");
 
         if (choice == 7) {
             printf("\nExisting system. Goodbye.\n");
@@ -32,15 +33,17 @@ int main() {
         }
 
         switch (choice) {
-            case 1: printf("\n[Employee Module Selected]\n");
+            case 1: 
+            printf("\nEntering Employee Management Functons...\n");
+            addEmployee();
             break;
-            case 2: printf("\n[Budget Module Selected]\n");
+            case 2: budgetMenu;
             break;
             case 3: printf("\n[Suppliers Module Selected]\n");
             break;
-            case 4: printf("\n[Assets Module Selected]\n");
+            case 4: manageAssets();
             break;
-            case 5: printf("\n[Reports Module Selected]\n");
+            case 5: printf("\n[Initializing Global summary generation Matrices]\n");
             break;
             case 6: runSystemTests(); //calls code in testing.c
             break;
