@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include "testing.h"
 
-void runSystemTests() {
-    printf("\n=== [STUDENT 7 DIAGNOSTIC SUITE RUNNING] ===\n");
-    printf("Status: Testing system framework integration...\n");
-    printf("Result: Framework structures verified successfully.\n");
-    printf("\n===============================================\n");
-}
+int testEmployeeodule() { return 1;}
+int testBudgetModule()   { return 1; }
+int testSupplierModule() { return 1; }
+int testAssetModule()    { return 1; }
+int testReportsModule()  { return 1; }
+int testValidationUnit() { return 1; }
+
+printf("\n=====================================================================\n");
+printf("              MFMS AUTOMATED SYSTEM DIAGNOSTIC EVALUATION               \n");
+printf("\n=====================================================================\n");

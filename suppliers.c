@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "supplier.h"
+#include "suppliers.h"
 
 // Add a new supplier
 void addSupplier(Supplier suppliers[], int *count) {

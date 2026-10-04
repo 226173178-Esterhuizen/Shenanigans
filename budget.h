@@ -1,4 +1,8 @@
 #ifndef BUDGET_H
 #define BUDGET_H
-// Student 2 stuff goes here
+
+#define MAX_DEPARTMENTS 20
+
+void budgetMenu(void);
+
 #endif

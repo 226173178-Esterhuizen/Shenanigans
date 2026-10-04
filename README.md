@@ -2,7 +2,7 @@
 
 ## Project details:
 * **Course:** Programming in Practice
-* **Group Members:** Bea Esterhuizen(226173178), Elvis Masule(226077063), Magnus Nuumbembe(226043061), Saara Lita(226174301), Simataa Mushaukwa(2226077063), Johannes Silas(226043908), If-Pio Iyambo(226095568).
+* **Group Members:** Bea Esterhuizen(226173178), Elvis Masule(226077063), Magnus Nuumbembe(226043061), Saara Lita(226174301), Simataa Mushaukwa(2226077065), Johannes Silas(226043908), If-Pio Iyambo(226095568).
 ## System Description
 The Municipal Financial Management System (MFMS) is a modular console based application written in C. The system acts as a management panel designed for municipal administrators to handle employee databases, financial budget allocations, supplier tracking, asset indices, reporting matrices and secure data formatting filters safely from a single executable program environment.
 
@@ -13,7 +13,7 @@ This matrix serves as the official operational guide mapping individual project 
 | :--- | :--- | :--- |
 | **Johannes** | `employees.c` / `employees.h` | Employee Management tracking databases. |
 | **If-pio** | `budget.c` / `budget.h` | Financial allocation indices and balance ledgers (Budget Management). |
-| **Nuumbembe** | `suppliers.c` / `suppliers.h` | Third-party vendor procurement tracking (Supplier Management). |
+| **Magnus** | `suppliers.c` / `suppliers.h` | Third-party vendor procurement tracking (Supplier Management). |
 | **Simataa** | `assets.c` / `assets.h` | Property tracking registries and appraisal logs (Asset Management). |
 | **Elvis** | `reports.c` / `reports.h` | Aggregate calculation outputs and text exports (Report Module). |
 | **Saara** | `validation.c` / `validation.h` | Robust numeric data validation engine (Functions, integrastion and validation). |
