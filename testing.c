@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "testing.h"
 
-int testEmployeeodule() { return 1;}
+int testEmployeeModule() { return 1;}
 int testBudgetModule()   { return 1; }
 int testSupplierModule() { return 1; }
 int testAssetModule()    { return 1; }

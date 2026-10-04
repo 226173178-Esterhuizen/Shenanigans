@@ -11,6 +11,10 @@
 
 int main() {
     int choice;
+
+    Supplier suppliersArray[MAX_SUPPLIERS];
+    int supplierCount = 0;
+    
     while (1) {
         printf("\n================\n");
         printf(" MUNICIPAL FINANCIAL MANAGEMENT SYSTEM \n");
@@ -25,7 +29,7 @@ int main() {
         printf("====================\n");
         
 
-        choice = getValidTnt("Enter your choice (1-7): ");
+        choice = getValidInt("Enter your choice (1-7): ");
 
         if (choice == 7) {
             printf("\nExisting system. Goodbye.\n");
@@ -39,7 +43,7 @@ int main() {
             break;
             case 2: budgetMenu;
             break;
-            case 3: printf("\n[Suppliers Module Selected]\n");
+            case 3: supplierMenu(suppliersArray, &supplierCount);
             break;
             case 4: manageAssets();
             break;

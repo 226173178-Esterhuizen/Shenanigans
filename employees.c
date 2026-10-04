@@ -73,9 +73,3 @@ void calculateSalary() {
     }
     printf("Employee not found.\n");
 }
-int main() {
-    printf("Employee Management System\n");
-    printf("welcome to employee management");
-
-    return 0;
-}

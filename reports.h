@@ -1,5 +1,6 @@
 #ifndef REPORTS_H
 #define REPORTS_H
+#include "suppliers.h"
 
 #define MAX_NAME 50
 #define MAX_EMAIL 50
@@ -23,15 +24,6 @@ typedef struct {
     double allocatedBudget;
     double expenditure;
 } Budget;
-
-typedef struct {
-    int id;
-    char name[MAX_NAME];
-    char email[MAX_EMAIL];
-    char phone[MAX_PHONE];
-    char location[MAX_LOCATION];
-} Supplier;
-
 typedef struct {
     int id;
     char name[MAX_NAME];
