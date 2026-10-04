@@ -2,7 +2,7 @@
 
 ## Project details:
 * **Course:** Programming in Practice
-* **Group Members:** Bea Esterhuizen(226173178), Elvis Masule(226077063), Magnus Nuumbembe(226043061), Saara Lita(226174301), Simataa Mushaukwa(2226077065), Johannes Silas(226043908), If-Pio Iyambo(226095568).
+* **Group Members:** Bea Esterhuizen(226173178), Elvis Masule(226077063), Magnus Nuumbembe(226043061), Saara Iita(226174301), Simataa Mushaukwa(2226077065), Johannes Silas(226043908), If-Pio Iyambo(226095568).
 ## System Description
 The Municipal Financial Management System (MFMS) is a modular console based application written in C. The system acts as a management panel designed for municipal administrators to handle employee databases, financial budget allocations, supplier tracking, asset indices, reporting matrices and secure data formatting filters safely from a single executable program environment.
 
