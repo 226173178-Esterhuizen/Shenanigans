@@ -1,0 +1,6 @@
+# Ignore executables
+*.exe
+
+# Ignore all images except image-3.png
+*.png
+!image-3.png
