@@ -14,7 +14,18 @@ int main() {
 
     Supplier suppliersArray[MAX_SUPPLIERS];
     int supplierCount = 0;
-    
+        // Missing Employee Arrays & Counters
+    Employee employeesArray[100];
+    int employeeCount = 0;
+
+    // Missing Budget Arrays & Counters
+    Budget budgetsArray[20];
+    int budgetCount = 0;
+
+    // Missing Asset Arrays & Counters
+    Asset assetsArray[100];
+    int assetCount = 0;
+
     while (1) {
         printf("\n================\n");
         printf(" MUNICIPAL FINANCIAL MANAGEMENT SYSTEM \n");
@@ -41,17 +52,18 @@ int main() {
             printf("\nEntering Employee Management Functons...\n");
             addEmployee();
             break;
-            case 2: budgetMenu;
+            case 2: budgetMenu();
             break;
             case 3: supplierMenu(suppliersArray, &supplierCount);
             break;
             case 4: manageAssets();
             break;
-            case 5: printf("\n[Initializing Global summary generation Matrices]\n");
+            case 5: displayReportsMenu(employeesArray, employeeCount, budgetsArray, budgetCount, suppliersArray, supplierCount, assetsArray, assetCount);
             break;
             case 6: runSystemTests(); //calls code in testing.c
             break;
             default: printf("\nInvalid choice. Try again. Please enter a number between 1 and 7.\n");
+            break;
         }
     }
     return 0;
