@@ -3,8 +3,7 @@
 
 #define MAX_EMPLOYEES 50
 
-// Employee structure
-struct Employee {
+typedef struct Employee {
     int id;
     char name[50];
     char department[50];
@@ -12,7 +11,10 @@ struct Employee {
     float housingAllowance;
     float transportAllowance;
     char email[50];
-};
+} Employee;
+
+extern Employee employees[MAX_EMPLOYEES];
+extern int employeeCount;
 
 // Function prototypes
 void addEmployee();

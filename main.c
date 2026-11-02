@@ -9,14 +9,34 @@
 #include "testing.h"
 #include "validation.h"
 
+static void employeeMenu(void) {
+    int choice;
+
+    do {
+        printf("\n--- EMPLOYEE MENU ---\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employees\n");
+        printf("3. Search Employee\n");
+        printf("4. Calculate Employee Salary\n");
+        printf("5. Return to Main Menu\n");
+
+        choice = getValidInt("Enter choice: ");
+        switch (choice) {
+            case 1: addEmployee(); break;
+            case 2: displayEmployees(); break;
+            case 3: searchEmployee(); break;
+            case 4: calculateSalary(); break;
+            case 5: printf("Returning to main menu...\n"); break;
+            default: printf("Invalid choice. Enter a number between 1 and 5.\n");
+        }
+    } while (choice != 5);
+}
+
 int main() {
     int choice;
 
     Supplier suppliersArray[MAX_SUPPLIERS];
     int supplierCount = 0;
-        // Missing Employee Arrays & Counters
-    Employee employeesArray[100];
-    int employeeCount = 0;
 
     // Missing Budget Arrays & Counters
     Budget budgetsArray[20];
@@ -48,17 +68,14 @@ int main() {
         }
 
         switch (choice) {
-            case 1: 
-            printf("\nEntering Employee Management Functons...\n");
-            addEmployee();
-            break;
+            case 1: employeeMenu(); break;
             case 2: budgetMenu();
             break;
             case 3: supplierMenu(suppliersArray, &supplierCount);
             break;
             case 4: manageAssets();
             break;
-            case 5: displayReportsMenu(employeesArray, employeeCount, budgetsArray, budgetCount, suppliersArray, supplierCount, assetsArray, assetCount);
+            case 5: displayReportsMenu(employees, employeeCount, budgetsArray, budgetCount, suppliersArray, supplierCount, assetsArray, assetCount);
             break;
             case 6: runSystemTests(); //calls code in testing.c
             break;
