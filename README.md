@@ -27,7 +27,7 @@ Because this is a strict modular engineering project, all `.c` dependencies shou
 gcc main.c testing.c employees.c budget.c suppliers.c assets.c reports.c validation.c -o mfms_system
 
 # Execution Command (Windows PowerShell)
-.\final_mfms_system.exe
+.\mfms_system.exe
 ````
 
 ## System Diagnostics Module
