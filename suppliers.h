@@ -6,10 +6,21 @@
 
 // Structure to store supplier details
 typedef struct {
+   union{
+    char id[STR_LEN];
     char supplierID[STR_LEN];
+   };
+   union{
+    char name[STR_LEN];
     char supplierName[STR_LEN];
+   };
+   union{   
     char email[STR_LEN];
+   };
+   union{
+    char phone[STR_LEN];
     char telephone[STR_LEN];
+   };
     char location[STR_LEN];
 } Supplier;
 

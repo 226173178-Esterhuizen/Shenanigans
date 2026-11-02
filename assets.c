@@ -1,22 +1,15 @@
 #include <stdio.h>
 #include <string.h>
+#include "assets.h"
 
-struct Asset {
-    int id;
-    char name[50];
-    char type[30];
-    float value;
-    char department[50];
-    char condition[30];
-};
+void manageAssets() {
+struct Asset registry[100];
+int assetCount = 0;
+int choice;
+int searchID;
+int found;
 
-int main() {
-    struct Asset registry[100];
-    int assetCount = 0;
-    int choice;
-    int searchID;
-    int found;
-do {
+    do {
         printf("\n================ ASSET REGISTER ================\n");
         printf("1. Add New Asset\n");
         printf("2. Display Assets\n");
@@ -29,6 +22,7 @@ do {
         switch(choice) {
 
             case 1:
+
                 printf("\n--- ADD NEW ASSET ---\n");
 
                 printf("Enter Asset ID: ");
@@ -110,6 +104,4 @@ do {
         }
 
     } while (choice != 4);
-
-    return 0;
 }
