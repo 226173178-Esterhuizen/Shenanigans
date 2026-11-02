@@ -1,5 +1,7 @@
 #ifndef REPORTS_H
 #define REPORTS_H
+#include "employees.h"
+#include "suppliers.h"
 
 #define MAX_NAME 50
 #define MAX_EMAIL 50
@@ -8,30 +10,11 @@
 #define MAX_TYPE 30
 #define MAX_CONDITION 20
 
-/* Struct definitions matching system entities */
-typedef struct {
-    int id;
-    char name[MAX_NAME];
-    char department[MAX_NAME];
-    double basicSalary;
-    double housingAllowance;
-    double transportAllowance;
-} Employee;
-
 typedef struct {
     char name[MAX_NAME];
     double allocatedBudget;
     double expenditure;
 } Budget;
-
-typedef struct {
-    int id;
-    char name[MAX_NAME];
-    char email[MAX_EMAIL];
-    char phone[MAX_PHONE];
-    char location[MAX_LOCATION];
-} Supplier;
-
 typedef struct {
     int id;
     char name[MAX_NAME];
