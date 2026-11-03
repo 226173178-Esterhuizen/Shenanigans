@@ -1,24 +1,25 @@
+//code updated
 #include <stdio.h>
 #include <string.h>
 #include "suppliers.h"
 
-// Add a new supplier
-void addSupplier(Supplier suppliers[], int *count) {
+// Function to validate and add a new supplier
+void addSupplier(SupplierInfo suppliers[], int *count) {
     if (*count >= MAX_SUPPLIERS) {
         printf("\nError: Supplier database is full!\n");
         return;
     }
 
-    Supplier newSupplier;
+    SupplierInfo newSupplier;
     printf("\n--- Add New Supplier ---\n");
 
-    // ID
+    // Input Supplier ID
     printf("Enter Supplier ID: ");
     scanf("%s", newSupplier.supplierID);
 
-    // Name
+    // Input Supplier Name
     printf("Enter Supplier Name: ");
-    getchar(); 
+    getchar(); // Clear newline buffer
     fgets(newSupplier.supplierName, STR_LEN, stdin);
     newSupplier.supplierName[strcspn(newSupplier.supplierName, "\n")] = '\0';
 
@@ -27,30 +28,30 @@ void addSupplier(Supplier suppliers[], int *count) {
         return;
     }
 
-    // Email
+    // Input Email
     printf("Enter Email Address: ");
     scanf("%s", newSupplier.email);
 
-    // Telephone
+    // Input Telephone
     printf("Enter Telephone Number: ");
     scanf("%s", newSupplier.telephone);
 
-    // Location
+    // Input Location
     printf("Enter Town/Location: ");
     getchar();
     fgets(newSupplier.location, STR_LEN, stdin);
     newSupplier.location[strcspn(newSupplier.location, "\n")] = '\0';
 
-    // Save
+    // Save into array
     suppliers[*count] = newSupplier;
     (*count)++;
-    printf("Supplier added!\n");
+    printf("Supplier successfully added!\n");
 }
 
-// Show all suppliers
-void displaySuppliers(const Supplier suppliers[], int count) {
+// Function to display all registered suppliers
+void displaySuppliers(const SupplierInfo suppliers[], int count) {
     if (count == 0) {
-        printf("\nNo suppliers registered.\n");
+        printf("\nNo suppliers registered in the system.\n");
         return;
     }
 
@@ -66,22 +67,21 @@ void displaySuppliers(const Supplier suppliers[], int count) {
     }
 }
 
-// Search supplier by ID or Name
-void searchSupplier(const Supplier suppliers[], int count) {
+// Function to search for a supplier by ID or Name
+void searchSupplier(const SupplierInfo suppliers[], int count) {
     if (count == 0) {
-        printf("\nNo suppliers to search.\n");
+        printf("\nNo suppliers available to search.\n");
         return;
     }
 
     char searchTerm[STR_LEN];
-    printf("\nEnter Supplier ID or Name: ");
+    printf("\nEnter Supplier ID or Name to search: ");
     getchar();
     fgets(searchTerm, STR_LEN, stdin);
     searchTerm[strcspn(searchTerm, "\n")] = '\0';
 
     int found = 0;
     printf("\n--- Search Results ---\n");
-
     for (int i = 0; i < count; i++) {
         if (strcmp(suppliers[i].supplierID, searchTerm) == 0 || 
             strstr(suppliers[i].supplierName, searchTerm) != NULL) {
@@ -97,24 +97,24 @@ void searchSupplier(const Supplier suppliers[], int count) {
     }
 
     if (!found) {
-        printf("No supplier found for '%s'.\n", searchTerm);
+        printf("No supplier found matching '%s'.\n", searchTerm);
     }
 }
 
-// Supplier menu
-void supplierMenu(Supplier suppliers[], int *count) {
+// Sub-menu control layout for Supplier Management
+void supplierMenu(SupplierInfo suppliers[], int *count) {
     int choice;
     do {
-        printf("\n--- SUPPLIER MENU ---\n");
+        printf("\n--- SUPPLIER MANAGEMENT MENU ---\n");
         printf("1. Add Supplier\n");
-        printf("2. Display Suppliers\n");
+        printf("2. Display All Suppliers\n");
         printf("3. Search Supplier\n");
         printf("4. Return to Main Menu\n");
-        printf("Enter choice: ");
+        printf("Enter your choice: ");
 
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid input. Numbers only.\n");
-            while (getchar() != '\n'); 
+            printf("Invalid input. Please enter a number.\n");
+            while (getchar() != '\n'); // Clear buffer
             continue;
         }
 
@@ -122,9 +122,10 @@ void supplierMenu(Supplier suppliers[], int *count) {
             case 1: addSupplier(suppliers, count); break;
             case 2: displaySuppliers(suppliers, *count); break;
             case 3: searchSupplier(suppliers, *count); break;
-            case 4: printf("Returning...\n"); break;
-            default: printf("Invalid choice.\n");
+            case 4: printf("Returning to main menu...\n"); break;
+            default: printf("Invalid choice. Try again.\n");
         }
     } while (choice != 4);
 }
+
 
